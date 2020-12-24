@@ -8,15 +8,19 @@ import os
 import sys
 
 def string_left(s,amount):
-	""""Removes the given number of characters from the string (S)."""
+	""""Removes the given number of characters from the string (s).
+	Emulates a BGT function to do this."""
 	return s[:amount]
 
-#Todo: make the user enter a map filename, not just be map.txt
-if not os.path.isfile("map.txt"):
-	print("No map file.")
+mapFile=input("Enter a map file.")
+if mapFile=="":
+	print("Nothing was typed.")
+	sys.exit()
+if not os.path.isfile(mapFile):
+	print("No file with that name was found. Remember to include the extention.")
 	sys.exit()
 
-f=open("map.txt","r")
+f=open(mapFile,"r")
 text=f.read()
 f.close()
 
