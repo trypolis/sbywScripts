@@ -12,7 +12,7 @@ def stringLeft(s,amount):
 	Emulates a BGT function to do this."""
 	return s[:amount]
 
-mapFile=input("Enter a map file.")
+mapFile=input("Enter a map file to search.")
 if mapFile=="":
 	print("Nothing was typed.")
 	sys.exit()
@@ -51,5 +51,5 @@ for i in final_text:
 		checkpoints+=1
 	if stringLeft(i,9)=="vanishing" and len(i)>=16:
 		vanishes+=1
-print("You have "+str(platforms)+" platforms, "+str(walls)+" walls, "+str(staircases)+" staircases, "+str(doors)+" doors, "+str(signs)+" signs, "+str(zones)+" zones, "+str(sources)+" sound sources, "+str(travelpoints)+" travelpoints, "+str(belts)+" conveyer belts, "+str(hazards)+" hazards, and "+str(vanishes)+" vanishing platforms.")
+print("You have "+str(platforms)+" platforms, "+str(walls)+" walls, "+str(staircases)+" staircases, "+str(doors)+" doors, "+str(signs)+" signs, "+str(zones)+" zones, "+str(sources)+" sound sources, "+str(travelpoints)+" travelpoints, "+str(belts)+" conveyer belts, "+str(hazards)+" hazards, and "+str(vanishes)+" vanishing platforms in your map.")
 sys.exit()
